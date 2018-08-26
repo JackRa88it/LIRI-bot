@@ -1,14 +1,32 @@
 require("dotenv").config();
-
 var keys = require('./keys');
-var spotify = new Spotify(keys.spotify);
+var bandsintown = require('bandsintown')(keys.bandsInTown.app_id);
+// var spotify = new Spotify(keys.spotify);
 
-var command = process.argv[2];
-var search = process.argv.slice(3).join('+');
+var arg1 = process.argv[2];
+var arg2 = process.argv.slice(3).join(' ');
 
 
-function concertThis() {
-
+function concertThis(artist) {
+  bandsintown
+  .getArtistEventList(artist)
+  .then(function(events) {
+    if(events.length){
+      console.log('====================');
+      console.log('Upcoming events for ' + artist + ':');
+      console.log('====================');
+      events.forEach(i => {
+        console.log(i.title);
+        console.log(i.venue.name);
+        console.log(i.formatted_location);
+        console.log(i.formatted_datetime);
+        console.log('--------------------');
+      });
+    }
+    else{
+      console.log('No events found.');
+    };
+  });
 };
 
 function spotifyThis() {
@@ -24,16 +42,16 @@ function doWhat() {
 };
 
 
-function selectedCommand(cmd, srch) {
-  switch (cmd) {
+function selectedCommand(command, search) {
+  switch (command) {
     case 'concert-this':
-      concertThis();
+      concertThis(search);
       break;
     case 'spotify-this-song':
-      spotifyThis();
+      spotifyThis(search);
       break;
     case 'movie-this':
-      movieThis();
+      movieThis(search);
       break;
     case 'do-what-it-says':
       doWhat();
@@ -43,4 +61,4 @@ function selectedCommand(cmd, srch) {
   };
 };
 
-selectedCommand(command, search)
+selectedCommand(arg1, arg2)
