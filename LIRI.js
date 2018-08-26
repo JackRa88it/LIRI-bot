@@ -27,9 +27,19 @@ function concertThis(artist) {
         console.log(moment(i.datetime).format('MM/DD/YYYY'));
         console.log('--------------------');
       });
+      fs.appendFile('./log.txt', 'ok\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
     }
     else{
       console.log('No events found.');
+      fs.appendFile('./log.txt', 'No events found\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
     };
   });
 };
@@ -39,7 +49,6 @@ function spotifyThis(song) {
   .search({ type: 'track', query: song, limit: 1 })
   .then(function(response) {
     if (response.tracks.items.length) {
-      // console.log(JSON.stringify(response, null, 2));
       console.log('Song: ' + song);
       var artists = [];
       response.tracks.items[0].artists.forEach(i => {
@@ -48,6 +57,11 @@ function spotifyThis(song) {
       console.log('Artist(s): ' + artists.join(', '));
       console.log('Album: ' + response.tracks.items[0].album.name);
       console.log('Preview: ' + response.tracks.items[0].preview_url);
+      fs.appendFile('./log.txt', 'ok\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
     }
     else {
       console.log('Song not found. Here is "The Sign", anyway...');
@@ -56,6 +70,11 @@ function spotifyThis(song) {
   })
   .catch(function(err) {
     console.log(err);
+    fs.appendFile('./log.txt', 'error(' + err + ')\n', function(err) {
+      if (err) {
+        console.log(err);
+      };
+    });
   });
 };
 
@@ -72,6 +91,11 @@ function movieThis(title) {
     console.log(resp.Language);
     console.log(resp.Plot);
     console.log('Actors: ' + resp.Actors);
+    fs.appendFile('./log.txt', 'ok\n', function(err) {
+      if (err) {
+        console.log(err);
+      };
+    });
   });
 };
 
@@ -79,19 +103,40 @@ function doWhat() {
   fs.readFile('./random.txt', "utf8", function(error, data) {
     if (error) {
       return console.log(error);
+      fs.appendFile('./log.txt', 'error(' + error + ')\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
     };
     var dataArr = data.split(",");
     if (dataArr[0] !== 'do-what-it-says') {
+      fs.appendFile('./log.txt', 'ok\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
       selectedCommand(dataArr[0], dataArr[1]);
     }
     else {
       console.log("Don't try to throw me into an infinite loop, yo.");
+      fs.appendFile('./log.txt', 'quit, escaped loop\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
     };
   });
 };
 
 
 function selectedCommand(command, search) {
+  var logEntry = moment().format() + ' CALLED selectedCommand(' + command + ', ' + search + ') RESULT: ';
+  fs.appendFile('./log.txt', logEntry, function(err) {
+    if (err) {
+      console.log(err);
+    };
+  });
   switch (command) {
     case 'concert-this':
       concertThis(search);
@@ -114,6 +159,11 @@ function selectedCommand(command, search) {
       break;
     default:
       console.log('needs correct arguments');
+      fs.appendFile('./log.txt', 'aborted, invalid arguments\n', function(err) {
+        if (err) {
+          console.log(err);
+        };
+      });
   };
 };
 

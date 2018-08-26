@@ -1,0 +1,7 @@
+2018-08-26T16:06:14-07:00 CALLED selectedCommand(movie-this, The Matrix) RESULT: ok
+2018-08-26T16:06:28-07:00 CALLED selectedCommand(spotify-this-song, Herr Faust) RESULT: ok
+2018-08-26T16:07:42-07:00 CALLED selectedCommand(moasdfasdf, ) RESULT: aborted, invalid arguments
+2018-08-26T16:08:01-07:00 CALLED selectedCommand(concert-this, Radiohead) RESULT: ok
+2018-08-26T16:08:24-07:00 CALLED selectedCommand(do-what-it-says, ) RESULT: quit, escaped loop
+2018-08-26T16:08:48-07:00 CALLED selectedCommand(do-what-it-says, ) RESULT: ok
+2018-08-26T16:08:48-07:00 CALLED selectedCommand(movie-this, The Matrix) RESULT: ok
