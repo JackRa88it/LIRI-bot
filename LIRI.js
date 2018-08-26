@@ -5,7 +5,7 @@ var bandsintown = require('bandsintown')(keys.bandsInTown.app_id);
 var moment = require('moment');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
-var omdb = require('omdb');
+var fs = require('fs');
 
 var arg1 = process.argv[2];
 var arg2 = process.argv.slice(3).join(' ');
@@ -74,10 +74,20 @@ function movieThis(title) {
     console.log('Actors: ' + resp.Actors);
   });
 };
-// ^dry this up by putting the no-movie-entered logic into the switch case call
 
 function doWhat() {
-
+  fs.readFile('./random.txt', "utf8", function(error, data) {
+    if (error) {
+      return console.log(error);
+    };
+    var dataArr = data.split(",");
+    if (dataArr[0] !== 'do-what-it-says') {
+      selectedCommand(dataArr[0], dataArr[1]);
+    }
+    else {
+      console.log("Don't try to throw me into an infinite loop, yo.");
+    };
+  });
 };
 
 
