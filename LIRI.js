@@ -1,6 +1,7 @@
 require("dotenv").config();
 var keys = require('./keys');
 var bandsintown = require('bandsintown')(keys.bandsInTown.app_id);
+var moment = require('moment');
 // var spotify = new Spotify(keys.spotify);
 
 var arg1 = process.argv[2];
@@ -19,7 +20,7 @@ function concertThis(artist) {
         console.log(i.title);
         console.log(i.venue.name);
         console.log(i.formatted_location);
-        console.log(i.formatted_datetime);
+        console.log(moment(i.datetime).format('MM/DD/YYYY'));
         console.log('--------------------');
       });
     }
