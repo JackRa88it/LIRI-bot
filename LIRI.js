@@ -1,11 +1,11 @@
 require("dotenv").config();
 var keys = require('./keys');
+var fs = require('fs');
 var request = require('request');
 var bandsintown = require('bandsintown')(keys.bandsInTown.app_id);
 var moment = require('moment');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
-var fs = require('fs');
 
 var arg1 = process.argv[2];
 var arg2 = process.argv.slice(3).join(' ');
@@ -56,7 +56,12 @@ function spotifyThis(song) {
       })
       console.log('Artist(s): ' + artists.join(', '));
       console.log('Album: ' + response.tracks.items[0].album.name);
-      console.log('Preview: ' + response.tracks.items[0].preview_url);
+      if (response.tracks.items[0].preview_url) {
+        console.log('Preview: ' + response.tracks.items[0].preview_url);
+      }
+      else {
+        console.log('No preview available');
+      };
       fs.appendFile('./log.txt', 'ok\n', function(err) {
         if (err) {
           console.log(err);
@@ -66,7 +71,7 @@ function spotifyThis(song) {
     else {
       console.log('Song not found. Here is "The Sign", anyway...');
       spotifyThis('The Sign');
-    }
+    };
   })
   .catch(function(err) {
     console.log(err);
@@ -120,7 +125,7 @@ function doWhat() {
     }
     else {
       console.log("Don't try to throw me into an infinite loop, yo.");
-      fs.appendFile('./log.txt', 'quit, escaped loop\n', function(err) {
+      fs.appendFile('./log.txt', 'aborted, escaped loop\n', function(err) {
         if (err) {
           console.log(err);
         };
@@ -158,7 +163,7 @@ function selectedCommand(command, search) {
       doWhat();
       break;
     default:
-      console.log('needs correct arguments');
+      console.log('aborted, invalid arguments');
       fs.appendFile('./log.txt', 'aborted, invalid arguments\n', function(err) {
         if (err) {
           console.log(err);

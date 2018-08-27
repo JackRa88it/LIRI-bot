@@ -5,3 +5,9 @@
 2018-08-26T16:08:24-07:00 CALLED selectedCommand(do-what-it-says, ) RESULT: quit, escaped loop
 2018-08-26T16:08:48-07:00 CALLED selectedCommand(do-what-it-says, ) RESULT: ok
 2018-08-26T16:08:48-07:00 CALLED selectedCommand(movie-this, The Matrix) RESULT: ok
+2018-08-26T16:14:02-07:00 CALLED selectedCommand(concert-this, Radiohead) RESULT: ok
+2018-08-26T16:14:42-07:00 CALLED selectedCommand(spotify-this-song, Here Comes the Sun) RESULT: ok
+2018-08-26T16:15:08-07:00 CALLED selectedCommand(movie-this, the matrix) RESULT: ok
+2018-08-26T16:15:43-07:00 CALLED selectedCommand(do-what-it-says, ) RESULT: ok
+2018-08-26T16:15:43-07:00 CALLED selectedCommand(spotify-this-song, Yellow Submarine) RESULT: ok
+2018-08-26T21:40:05-07:00 CALLED selectedCommand(spotify-this-song, Herr Faust) RESULT: ok
