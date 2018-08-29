@@ -91,16 +91,18 @@ function movieThis(title) {
   var queryURL = "http://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=" + keys.omdb.omdbKey;
   // console.log(queryURL);
   request(queryURL, function(error, response, body){
-    if (response === false) {
-      var resp = JSON.parse(body);
-      console.log(resp.Title);
-      console.log(resp.Year);
-      console.log('IMDB rating: ' + resp.Ratings[0].Value);
-      console.log('Rotten Tomatoes rating: ' + resp.Ratings[1].Value);
-      console.log(resp.Country);
-      console.log(resp.Language);
-      console.log(resp.Plot);
-      console.log('Actors: ' + resp.Actors);
+    var bod = JSON.parse(body);
+    if (bod.Response !== "False") {
+      console.log('--------------------');
+      console.log(bod.Title);
+      console.log(bod.Year);
+      console.log('IMDB rating: ' + bod.Ratings[0].Value);
+      console.log('Rotten Tomatoes rating: ' + bod.Ratings[1].Value);
+      console.log(bod.Country);
+      console.log(bod.Language);
+      console.log(bod.Plot);
+      console.log('Actors: ' + bod.Actors);
+      console.log('--------------------');
       fs.appendFile('./log.txt', 'ok\n', function(err) {
         if (err) {
           console.log(err);
@@ -114,7 +116,7 @@ function movieThis(title) {
           console.log(err);
         };
       });
-    }
+    };
   });
 };
 

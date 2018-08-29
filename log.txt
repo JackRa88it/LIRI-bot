@@ -27,4 +27,17 @@
 2018-08-26T22:28:27-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:28:43-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
 2018-08-26T22:29:58-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:32:05-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:32:37-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:33:02-07:00 CALLED selectedCommand(movie this, asdkjghaksgh) RESULT: 2018-08-26T22:37:16-07:00 CALLED selectedCommand(do what it says (the Text File of Truth), ) RESULT: ok
 2018-08-26T22:37:16-07:00 CALLED selectedCommand(spotify this song, Immigrant Song) RESULT: ok
-2018-08-28T20:16:07-07:00 CALLED selectedCommand(spotify this song, ) RESULT: 
+2018-08-28T20:16:07-07:00 CALLED selectedCommand(spotify this song, ) RESULT: 2018-08-28T22:05:02-07:00 CALLED selectedCommand(movie this, The Exorcist) RESULT: movie not found
+2018-08-28T22:05:13-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: movie not found
+2018-08-28T22:05:27-07:00 CALLED selectedCommand(concert this, Radiohead) RESULT: ok
+2018-08-28T22:05:45-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: movie not found
+2018-08-28T22:07:51-07:00 CALLED selectedCommand(movie this, Coco) RESULT: movie not found
+2018-08-28T22:08:49-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: movie not found
+2018-08-28T22:08:58-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: movie not found
+2018-08-28T22:10:01-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
+2018-08-28T22:11:14-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
+2018-08-28T22:11:33-07:00 CALLED selectedCommand(movie this, coco) RESULT: ok
+2018-08-28T22:11:51-07:00 CALLED selectedCommand(movie this, agsjdhglakjsdhglajsdg) RESULT: 2018-08-28T22:13:21-07:00 CALLED selectedCommand(movie this, alskdjgasldghadgasg) RESULT: 2018-08-28T22:14:20-07:00 CALLED selectedCommand(movie this, aslkdjgalskdghlasjdg) RESULT: 2018-08-28T22:15:18-07:00 CALLED selectedCommand(movie this, asdfasdfasdgasdg) RESULT: 2018-08-28T22:16:06-07:00 CALLED selectedCommand(movie this, asfdadsfasdgasgasdg) RESULT: 2018-08-28T22:18:43-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: 2018-08-28T22:19:20-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
+2018-08-28T22:19:37-07:00 CALLED selectedCommand(movie this, asdgasdfasdfasdgadsg) RESULT: 2018-08-28T22:21:28-07:00 CALLED selectedCommand(movie this, asdfasdfasdfasf) RESULT: 2018-08-28T22:21:43-07:00 CALLED selectedCommand(movie this, asdfasdfasdgasdg) RESULT: 2018-08-28T22:22:12-07:00 CALLED selectedCommand(movie this, asdjkglhaslkjdghal) RESULT: 2018-08-28T22:22:25-07:00 CALLED selectedCommand(movie this, sadsgasdgasdg) RESULT: 2018-08-28T22:22:59-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: 2018-08-28T22:23:15-07:00 CALLED selectedCommand(movie this, asldgjjlhaksjdhg) RESULT: 2018-08-28T22:23:46-07:00 CALLED selectedCommand(movie this, asdgjashdlgjkahsdljgh) RESULT: 2018-08-28T22:25:56-07:00 CALLED selectedCommand(movie this, asdfasdfasdfasdf) RESULT: movie not found
+2018-08-28T22:26:11-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
+2018-08-28T22:26:50-07:00 CALLED selectedCommand(concert this, alsdkfjalsdkgjlasdg) RESULT: 
