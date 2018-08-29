@@ -27,3 +27,4 @@
 2018-08-26T22:28:27-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:28:43-07:00 CALLED selectedCommand(movie this, The Matrix) RESULT: ok
 2018-08-26T22:29:58-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:32:05-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:32:37-07:00 CALLED selectedCommand(movie this, The Europa Report) RESULT: 2018-08-26T22:33:02-07:00 CALLED selectedCommand(movie this, asdkjghaksgh) RESULT: 2018-08-26T22:37:16-07:00 CALLED selectedCommand(do what it says (the Text File of Truth), ) RESULT: ok
 2018-08-26T22:37:16-07:00 CALLED selectedCommand(spotify this song, Immigrant Song) RESULT: ok
+2018-08-28T20:16:07-07:00 CALLED selectedCommand(spotify this song, ) RESULT: 

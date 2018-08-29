@@ -202,3 +202,5 @@ inquirer.prompt([
 ]).then(function(input) {
   selectedCommand(input.command, input.search);
 });
+
+// add error-catching for no search entered
